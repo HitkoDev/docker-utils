@@ -1,6 +1,6 @@
 {
     "name": "docker-utils",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "main": "dist/index.js",
     "repository": "https://github.com/HitkoDev/docker-utils.git",
     "author": "Hitko Development <development@hitko.si>",
@@ -19,7 +19,7 @@
         "kill-website-stacks": "./bin/kill-website-stacks.sh",
         "fix-wordpress-permissions": "./bin/fix-wordpress-permissions.sh",
         "pagespeed-redis": "./bin/pagespeed-redis.sh",
-        "resource-limits": "./dist/resource-limits.js"
+        "resource-limits": "./bin/resource-limits.js"
     },
     "files": [
         "dist",
