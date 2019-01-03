@@ -22,9 +22,9 @@
         "resource-limits": "./dist/resource-limits.js"
     },
     "files": [
-        "./dist",
-        "./bin",
-        "./yarn.lock"
+        "dist",
+        "bin",
+        "yarn.lock"
     ],
     "devDependencies": {
         "@types/js-yaml": "^3.11.4",
