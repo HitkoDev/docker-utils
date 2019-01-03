@@ -1,0 +1,29 @@
+{
+    "name": "docker-utils",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "repository": "https://github.com/HitkoDev/docker-utils.git",
+    "author": "Hitko Development <development@hitko.si>",
+    "license": "GPL-3.0",
+    "scripts": {
+        "start": "nodemon -e ts -w ./src -x ts-node --fast --files --cache-directory .tscache ./src/index.ts",
+        "build": "tsc -p tsconfig.production.json",
+        "prod": "node ./dist/index.js",
+        "lint": "tslint --fix --project .",
+        "prepack": "npm run build"
+    },
+    "bin": {
+        "do-deploy": "./bin/do-deploy.sh"
+    },
+    "files": [
+        "./dist",
+        "./bin"
+    ],
+    "devDependencies": {
+        "@types/node": "^10.12.18",
+        "nodemon": "^1.18.9",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.12.0",
+        "typescript": "^3.2.2"
+    }
+}
