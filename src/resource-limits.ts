@@ -4,6 +4,7 @@ import { readdir, readFile, stat } from 'fs'
 import { safeLoad } from 'js-yaml'
 import * as path from 'path'
 import { promisify } from 'util'
+import * as windowSize from 'window-size'
 import { command } from 'yargs'
 
 const readDirP = promisify(readdir)
@@ -62,7 +63,7 @@ command('*', 'List resource limits per service', (yargs) => yargs
             columns.map(c => titleCase(c)).join(' \t'),
             ...resources.map(resource => columns.map(k => resource[k] === undefined ? null : resource[k]).join('    \t'))
         ].join('\n')
-        const ui = cliui()
+        const ui = cliui({ width: windowSize.get().width })
         ui.div(out)
 
         console.log(ui.toString())

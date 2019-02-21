@@ -1,6 +1,6 @@
 {
     "name": "docker-utils",
-    "version": "0.0.6",
+    "version": "0.1.0",
     "main": "dist/index.js",
     "repository": "https://github.com/HitkoDev/docker-utils.git",
     "author": "Hitko Development <development@hitko.si>",
@@ -13,6 +13,7 @@
         "prepack": "npm run build"
     },
     "bin": {
+        "disable-cron": "./bin/disable-cron.sh",
         "do-deploy": "./bin/do-deploy.sh",
         "start-website-stacks": "./bin/start-website-stacks.sh",
         "restart-website-stacks": "./bin/restart-website-stacks.sh",
@@ -39,6 +40,7 @@
         "change-case": "^3.0.2",
         "cliui": "^4.1.0",
         "js-yaml": "^3.12.0",
+        "window-size": "^1.1.1",
         "yargs": "^12.0.5"
     }
 }
