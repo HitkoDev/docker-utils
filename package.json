@@ -1,6 +1,6 @@
 {
     "name": "docker-utils",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "dist/index.js",
     "repository": "https://github.com/HitkoDev/docker-utils.git",
     "author": "Hitko Development <development@hitko.si>",
