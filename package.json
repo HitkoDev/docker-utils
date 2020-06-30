@@ -1,6 +1,6 @@
 {
     "name": "docker-utils",
-    "version": "0.1.1",
+    "version": "0.2.4",
     "main": "dist/index.js",
     "repository": "https://github.com/HitkoDev/docker-utils.git",
     "author": "Hitko Development <development@hitko.si>",
@@ -13,7 +13,7 @@
         "prepack": "npm run build"
     },
     "bin": {
-        "disable-cron": "./bin/disable-cron.sh",
+        "disable-cron": "./bin/disable-cron.js",
         "do-deploy": "./bin/do-deploy.sh",
         "start-website-stacks": "./bin/start-website-stacks.sh",
         "restart-website-stacks": "./bin/restart-website-stacks.sh",
@@ -28,19 +28,20 @@
         "yarn.lock"
     ],
     "devDependencies": {
-        "@types/js-yaml": "^3.11.4",
-        "@types/node": "^10.12.18",
-        "@types/yargs": "^12.0.5",
-        "nodemon": "^1.18.9",
-        "ts-node": "^7.0.1",
-        "tslint": "^5.12.0",
-        "typescript": "^3.2.2"
+        "@types/js-yaml": "^3.12.5",
+        "@types/node": "^14.0.14",
+        "@types/yargs": "^15.0.5",
+        "nodemon": "^2.0.4",
+        "ts-node": "^8.10.2",
+        "tslint": "^6.1.2",
+        "typescript": "^3.9.5"
     },
     "dependencies": {
-        "change-case": "^3.0.2",
-        "cliui": "^4.1.0",
-        "js-yaml": "^3.12.0",
+        "cliui": "^6.0.0",
+        "globby": "^11.0.1",
+        "js-yaml": "^3.14.0",
+        "title-case": "^3.0.2",
         "window-size": "^1.1.1",
-        "yargs": "^12.0.5"
+        "yargs": "^15.3.1"
     }
 }

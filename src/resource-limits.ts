@@ -1,8 +1,9 @@
-import { titleCase } from 'change-case'
+#!/usr/bin/env node
 import * as cliui from 'cliui'
 import { readdir, readFile, stat } from 'fs'
 import { safeLoad } from 'js-yaml'
 import * as path from 'path'
+import { titleCase } from 'title-case'
 import { promisify } from 'util'
 import * as windowSize from 'window-size'
 import { command } from 'yargs'
@@ -40,7 +41,7 @@ command('*', 'List resource limits per service', (yargs) => yargs
 
         const resources = [].concat(...composeFiles
             .filter(file => !!file)
-            .map(([file, content]) => [file, safeLoad(content)])
+            .map(([file, content]) => [file, safeLoad(content) as any])
             .map(([file, config]) => {
                 const services = config && config.services || {}
                 return Object.keys(services)
