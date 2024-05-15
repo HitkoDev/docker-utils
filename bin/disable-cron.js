@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("../dist/disable-cron")
+import "../dist/disable-cron.js"

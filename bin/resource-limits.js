@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("../dist/resource-limits")
+import "../dist/resource-limits.js"
