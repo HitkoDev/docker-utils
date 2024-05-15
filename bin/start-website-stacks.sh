@@ -4,7 +4,7 @@ for service in $(ls */docker-compose.yml); do
     arrIN=(${service//\// })
     if case $arrIN in __*) false;; esac; then
         cd $(echo "$dir/$arrIN")
-        docker stack deploy -c docker-compose.yml --with-registry-auth --prune $arrIN
+        docker stack deploy -c docker-compose.yml --detach=true --with-registry-auth --prune $arrIN
     fi
 done
 cd $dir
